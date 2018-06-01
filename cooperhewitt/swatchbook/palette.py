@@ -1,7 +1,7 @@
 import json
 import webcolors
 import colorsys
-from colormath.color_objects import RGBColor
+from colormath.color_objects import BaseRGBColor
 
 class palette:
 
@@ -109,7 +109,7 @@ class palette:
         the specified palette and returns the closest match (CMC method)
         http://en.wikipedia.org/wiki/Color_difference#CMC_l:c_.281984.29
         """
-        incumbent = RGBColor(*webcolors.hex_to_rgb(hex))
+        incumbent = BaseRGBColor(*webcolors.hex_to_rgb(hex))
 
         shortest_dist = None
         nearest_colour = None
